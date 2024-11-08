@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    # Build the project using Vite
+    build:
+      commands:
+        - npm install
+        - npm run build
+  artifacts:
+    # Point to the Vite output directory
+    baseDirectory: /dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
